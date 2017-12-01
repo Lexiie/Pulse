@@ -209,12 +209,12 @@ def main():
  # assign variables
  engine = Bruter(args.site.lower(),args.username,args.wordlist)
 
- # does tor exists?
- if not os.path.exists('/usr/sbin/tor'):
-  try:engine.installTor()
-  except KeyboardInterrupt:engine.kill('Exiting {}...{}'.format(self.g,self.n))
-  if not os.path.exists('/usr/sbin/tor'):
-   engine.kill('Please Install Tor'.format(engine.y,engine.r,engine.n))
+ 
+
+
+
+
+
 
  # does the account exists?
  if not engine.exists(engine.username):
@@ -228,8 +228,8 @@ def main():
    engine.kill('Exiting {}...{}'.format(engine.g,engine.n))
 
 if __name__ == '__main__':
- if not 'kali' in platform():
-  exit('Kali Linux required')
+ if not 'linux' in platform():
+  exit('linux required')
 
  if os.getuid():
   exit('root access required')
