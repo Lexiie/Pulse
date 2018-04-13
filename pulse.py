@@ -228,10 +228,10 @@ def main():
    engine.kill('Exiting {}...{}'.format(engine.g,engine.n))
 
 if __name__ == '__main__':
- if not 'linux' in platform():
+ if not 'Linux' in platform():
   exit('linux required')
 
- if os.getuid():
-  exit('root access required')
+ 
+  
  else:
   main()
